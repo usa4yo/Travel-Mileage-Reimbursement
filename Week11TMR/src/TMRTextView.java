@@ -13,25 +13,26 @@ import java.util.Scanner;
 
 public class TMRTextView {
 
-    public static int[] cities;
+    public static int[] city;
+    public static String[] cityName;
     
-    private static final String NUMBER_OF_CITY_VISITED = "Please enter the number of city your have visited";
-    private static final String REQUEST_STARTING_CITY = "Please enter the starting city";
-    private static final String REQUEST_NEXT_CITY = "Next city";    
+    private static final String NUMBER_OF_CITY_VISITED = "Please enter the number of city your have visited for your work trip: ";
+    private static final String REQUEST_STARTING_CITY = "Please enter the starting city: ";
+    private static final String REQUEST_NEXT_CITY = "Next city: ";    
         
     // Define keyboard as a scanner
     static Scanner kb;
     
-    public static void inputCities(int[] input){
+    public static void inputCities(){
         kb = new Scanner(System.in);
 
         System.out.println(NUMBER_OF_CITY_VISITED);
-        cities = new int[kb.nextInt()];
+        city = new int[kb.nextInt()];
         
         System.out.println(REQUEST_STARTING_CITY);
-        for(int i = 0; i < input.length; ++i){
-            System.out.print(REQUEST_NEXT_CITY + (i+1) + ": " );
-            input[i] = kb.nextInt();
+        for(int i = 0; i < city.length; ++i){
+            System.out.println(REQUEST_NEXT_CITY + (i+1) + ": " );
+            cityName[i] = kb.nextLine();
         }
     
         kb.close();

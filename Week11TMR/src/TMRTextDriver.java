@@ -9,10 +9,11 @@
  */
 
 public class TMRTextDriver {
+//    public static int[] input = null;
 
 	public static void main(String[] args) {
-		TMRTextView ttv = new TMRTextView();
-
+		TMRTextView.inputCities();
+		
 	}	// End bracket of main method
 
 }	// End bracket of TMRTextDriver class
