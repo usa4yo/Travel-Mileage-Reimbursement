@@ -24,13 +24,20 @@ public class TMRData {
 
         };
 
-    private int numberOfCity;
-    private String city;
+    private static int numberOfCity;
+    private static String city;
+    private int distance;
  
-    public TMRData(int numberOfCity, String city) {
-        super();
-        this.numberOfCity = numberOfCity;
-        this.city = city;
+    public TMRData(){
+        super();        
+    }
+
+    public TMRData(int newNumber){
+        this.numberOfCity = newNumber;
+    }
+    
+    public TMRData(String newcity) {
+        this.city = newcity;
     }
 
     /**
@@ -50,7 +57,7 @@ public class TMRData {
     /**
      * @return the numberOfCity
      */
-    public int getNumberOfCity() {
+    public static int getNumberOfCity() {
         return numberOfCity;
     }   // End bracket of getNumberOfCity method
 
@@ -64,7 +71,7 @@ public class TMRData {
     /**
      * @return the city
      */
-    public String getCity() {
+    public static String getCity() {
         return city;
     }   // End bracket of getCity method
 
