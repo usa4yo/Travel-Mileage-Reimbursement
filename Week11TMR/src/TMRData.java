@@ -6,11 +6,13 @@
  * @author      : ar25 (Yves Ouellet)
  * Email        : yves.ouellet@bcbssc.com
  * Creation     : 2017-04-11
- * Last Mod.    : 2017-04-11
- * Due Date     : 2017-04-12
+ * Last Mod.    : 2017-04-19
+ * Due Date     : 2017-04-20
  */
 
-public class TMRData {
+public class TMRData{
+    // Initialized mileage to a 10X10 array
+    // Horizontal and Vertical value are represented in the enum CityName 
     private static int[] [] mileage =   { {0, 1004, 1753, 2752, 3017, 1520, 1507, 609, 3155, 448},
             {1004, 0, 921, 1780, 2048, 1397, 919, 515, 2176, 709},
             {1753, 921, 0, 1230, 1399, 1343, 517, 1435, 2234, 1307},
@@ -23,63 +25,48 @@ public class TMRData {
             {448, 709, 1307, 2420, 2646, 1057, 1099, 571, 2887, 0}
 
         };
-
-    private static int numberOfCity;
-    private static String city;
-    private int distance;
- 
-    public TMRData(){
-        super();        
-    }
-
-    public TMRData(int newNumber){
-        this.numberOfCity = newNumber;
-    }
     
-    public TMRData(String newcity) {
-        this.city = newcity;
-    }
+    // Declare private int 
+    private static int numberOfCity;
+    
+    // Declare default constructor
+    public TMRData() {
+        super();
+        TMRData.numberOfCity = 0;
+    }   // Ending bracket of TRMData constructor
+    
+    // Declare constructor
+    public TMRData(int newNumberOfCity){
+        TMRData.numberOfCity = newNumberOfCity;
+    }   // Ending bracket of TRMData constructor
+    
 
     /**
      * @return the mileage
      */
     public static int[][] getMileage() {
         return mileage;
-    }   // End bracket of getMileage method
+    }   // Ending bracket of getMileage 
 
     /**
      * @param mileage the mileage to set
      */
     public static void setMileage(int[][] mileage) {
         TMRData.mileage = mileage;
-    }   // End bracket of setMileage method
+    }   // Ending bracket of setMileage
 
     /**
      * @return the numberOfCity
      */
     public static int getNumberOfCity() {
         return numberOfCity;
-    }   // End bracket of getNumberOfCity method
+    }   // Ending bracket of getNumberOfCity
 
     /**
      * @param numberOfCity the numberOfCity to set
      */
     public void setNumberOfCity(int numberOfCity) {
-        this.numberOfCity = numberOfCity;
-    }   // End bracket of setNumberOfCity method
+        TMRData.numberOfCity = numberOfCity;
+    }   // Ending bracket of setNumberOfCity
 
-    /**
-     * @return the city
-     */
-    public static String getCity() {
-        return city;
-    }   // End bracket of getCity method
-
-    /**
-     * @param city the city to set
-     */
-    public void setCity(String city) {
-        this.city = city;
-    }   // End bracket of setCity method
-   
-}	// End bracket of TMRData class
+}   // Ending bracket of TMRData

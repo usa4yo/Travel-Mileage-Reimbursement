@@ -16,4 +16,4 @@ public class TMRGUIDriver {
 
 	}	// End bracket of main method
 
-}	// End bracket of TMRGUIDrive class
+}	// End bracket of TMRGUIDriver class
